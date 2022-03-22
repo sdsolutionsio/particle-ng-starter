@@ -1,4 +1,4 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
+import {Component, ViewChild} from '@angular/core';
 import {Notification, NotificationService, PushContainerComponent} from '@sdsolutions/particle-ng';
 import {endOfWeek, startOfWeek} from 'date-fns';
 
@@ -6,7 +6,7 @@ import {endOfWeek, startOfWeek} from 'date-fns';
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html'
 })
-export class DashboardComponent implements OnInit {
+export class DashboardComponent {
 
   readonly console = console;
 
@@ -104,22 +104,19 @@ export class DashboardComponent implements OnInit {
     private notificationService: NotificationService
   ) { }
 
-  ngOnInit(): void {
-  }
-
   /**
    * Icon Selected event handler.
    *
    * @param event
    */
-  iconSelected(event: any) {
+  iconSelected(event: any): void {
     console.log(event.value);
   }
 
   /**
    * Icon select opened event handler
    */
-  iconSelectOpened() {
+  iconSelectOpened(): void {
     console.log('Icon select opened');
   }
 
@@ -142,7 +139,7 @@ export class DashboardComponent implements OnInit {
     );
   }
 
-  onPushContainerClose() {
+  onPushContainerClose(): void {
     console.log('Push container closed.');
   }
 

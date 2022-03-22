@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "particle-angular-starter-project": {
+    "particle-ng-starter": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/particle-angular-starter-project",
+            "outputPath": "dist/particle-ng-starter",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -28,12 +28,9 @@
             ],
             "styles": [
               "node_modules/@sdsolutions/particle-ng/particle.css",
-              "node_modules/quill/dist/quill.core.css",
-              "node_modules/quill/dist/quill.snow.css",
-              {"input": "src/styles.css", "bundleName": "app-styles"}
+              "src/styles.css"
             ],
             "scripts": [
-              "node_modules/quill/dist/quill.js",
               "node_modules/@fortawesome/fontawesome-free/js/all.js"
             ]
           },
@@ -74,10 +71,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "particle-angular-starter-project:build:production"
+              "browserTarget": "particle-ng-starter:build:production"
             },
             "development": {
-              "browserTarget": "particle-angular-starter-project:build:development"
+              "browserTarget": "particle-ng-starter:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -85,7 +82,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "particle-angular-starter-project:build"
+            "browserTarget": "particle-ng-starter:build"
           }
         },
         "test": {
@@ -104,9 +101,21 @@
             ],
             "scripts": []
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
+          }
         }
       }
     }
   },
-  "defaultProject": "particle-angular-starter-project"
+  "defaultProject": "particle-ng-starter",
+  "cli": {
+    "defaultCollection": "@angular-eslint/schematics"
+  }
 }

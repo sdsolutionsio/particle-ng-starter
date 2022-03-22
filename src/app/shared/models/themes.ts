@@ -14,8 +14,8 @@ export const THEMES: Array<Theme> = [
     dialogBodyColor: '#FEFEFE',
     pushContainerColor: '#FEFEFE',
     overlayStyle: 'border:1px solid rgba(0,0,0,0.1);background-color:#EFEFEF;color:#222222;',
-    overlayStyleAlt1: 'border:1px solid rgba(0,0,0,0.1);background-color:#FFFFFF;color:#222222;',
-    overlayStyleAlt2: 'border:1px solid rgba(0,0,0,0.1);',
+    overlayStyleAlt1: 'border:1px solid rgba(150,150,150,0.5);background-color:rgba(0,0,0,0.1);color:#111111;',
+    overlayStyleAlt2: 'border:1px solid rgba(150,150,150,0.5);background-color:rgba(255,255,255,0.1);color:#111111;',
     bgRed: '#823841',
     bgOrange: '#946a15',
     bgYellow: '#7a7626',
@@ -33,6 +33,9 @@ export const THEMES: Array<Theme> = [
       {className: 'bg_purple_alt', color: '#8a4878'},
       {className: 'bg_brown_alt', color: '#6b6032'},
       {className: 'bg_grey_alt', color: '#616161'},
+    ],
+    fonts: [
+      {name: 'Montserrat', isDefault: true}
     ]
   } as Theme,
   {
@@ -67,6 +70,9 @@ export const THEMES: Array<Theme> = [
       {className: 'bg_purple_alt', color: '#8a4878'},
       {className: 'bg_brown_alt', color: '#6b6032'},
       {className: 'bg_grey_alt', color: '#616161'},
+    ],
+    fonts: [
+      {name: 'Roboto', isDefault: true}
     ]
   } as Theme
 ];
