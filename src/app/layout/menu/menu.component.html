@@ -20,15 +20,14 @@
       <div class="">
         <particle-accordion
           [multiple]="true"
-          headerClass="pad_0"
-          height=""
+          headerClass="bg_overlay_rev brdr pad_5 brad_3"
           textClass="md"
-          [showIcon]="true">
+          [showIcon]="false">
           <!-- Item 1 -->
-          <particle-accordion-item [open]="true">
+          <particle-accordion-item [open]="true" headerClass="bg_green brdr">
             <ng-template particleAccordionHeader>
-              <div class="row pad_10 bg_red">
-                <i class="fas fa-dog"></i> <div class="mar_left5">GENERAL STYLES</div>
+              <div class="text">
+                <i class="fas fa-dog"></i> General Styles
               </div>
             </ng-template>
             <ng-template particleAccordionContent>
@@ -41,9 +40,9 @@
             </ng-template>
           </particle-accordion-item>
           <!-- Item 2 -->
-          <particle-accordion-item [open]="true">
+          <particle-accordion-item [open]="true" headerClass="bg_red brdr">
             <ng-template particleAccordionHeader>
-              <div class="row pad_5 bg_purple">
+              <div class="text">
                 <i class="fas fa-pencil"></i> Components
               </div>
             </ng-template>
@@ -57,7 +56,7 @@
             </ng-template>
           </particle-accordion-item>
           <!-- Item 3 -->
-          <particle-accordion-item [open]="true">
+          <particle-accordion-item [open]="true" headerClass="bg_blue brdr">
             <ng-template particleAccordionHeader>
               <div class="text">
                 <i class="fas fa-car"></i> Best Practices
