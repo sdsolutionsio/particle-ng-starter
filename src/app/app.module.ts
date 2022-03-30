@@ -1,29 +1,36 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import {LocalStorageService} from '@sdsolutions/particle-ng';
+import {AppRoutingModule} from './app-routing.module';
+import {AppComponent} from './app.component';
+import {LocalStorageService, ParticleAccordionModule, ParticlePushContainerModule} from '@sdsolutions/particle-ng';
 import {DemonstrationModule} from './modules/demonstration/demonstration.module';
-import { HeaderComponent } from './layout/header/header.component';
-import { FooterComponent } from './layout/footer/footer.component';
-import { HomeComponent } from './layout/home/home.component';
+import {HeaderComponent} from './layout/header/header.component';
+import {FooterComponent} from './layout/footer/footer.component';
+import {HomeComponent} from './layout/home/home.component';
+import {MenuComponent} from './layout/menu/menu.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    HomeComponent
+    HomeComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
     DemonstrationModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ParticlePushContainerModule,
+    ParticleAccordionModule
   ],
   providers: [
     LocalStorageService
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [
+    AppComponent
+  ]
 })
-export class AppModule { }
+export class AppModule {
+}

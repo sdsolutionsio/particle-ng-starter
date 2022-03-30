@@ -1,10 +1,11 @@
 <div class="site">
-  <app-header></app-header>
+  <app-header (menuToggle)="menu.toggle()"></app-header>
 
   <!-- main content -->
   <div class="site-content" id="site-content">
     <main class="col size_1 position_relative body_color" style="-ms-flex:1 0 auto;">
       <div class="width100">
+        <app-menu #menu></app-menu>
         <router-outlet></router-outlet>
       </div>
     </main>

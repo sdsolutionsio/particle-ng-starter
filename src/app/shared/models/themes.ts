@@ -2,7 +2,7 @@ import {Theme} from '@sdsolutions/particle-ng';
 
 export const THEMES: Array<Theme> = [
   {
-    themeId: 1,
+    themeId: 'b170c2d1-5ce4-449b-9519-0b7082be9200',
     isDefault: true,
     name: 'Default',
     menuColor: '#3f6570',
@@ -13,9 +13,6 @@ export const THEMES: Array<Theme> = [
     dialogHeaderColor: '#43555e',
     dialogBodyColor: '#FEFEFE',
     pushContainerColor: '#FEFEFE',
-    overlayStyle: 'border:1px solid rgba(0,0,0,0.1);background-color:#EFEFEF;color:#222222;',
-    overlayStyleAlt1: 'border:1px solid rgba(150,150,150,0.5);background-color:rgba(0,0,0,0.1);color:#111111;',
-    overlayStyleAlt2: 'border:1px solid rgba(150,150,150,0.5);background-color:rgba(255,255,255,0.1);color:#111111;',
     bgRed: '#823841',
     bgOrange: '#946a15',
     bgYellow: '#7a7626',
@@ -39,7 +36,7 @@ export const THEMES: Array<Theme> = [
     ]
   } as Theme,
   {
-    themeId: 2,
+    themeId: 'c12fd008-88eb-49ec-bcfe-bb4cfced56a5',
     isDefault: false,
     name: 'Other',
     menuColor: '#230e26',
@@ -50,9 +47,6 @@ export const THEMES: Array<Theme> = [
     dialogHeaderColor: '#2b4044',
     dialogBodyColor: '#2c2c2c',
     pushContainerColor: '#413f3f',
-    overlayStyle: 'border:1px solid rgba(0,0,0,0.1);background-color:#EFEFEF;color:#222222;',
-    overlayStyleAlt1: 'border:1px solid rgba(150,150,150,0.5);background-color:rgba(0,0,0,0.05);color:#FFFFFF;',
-    overlayStyleAlt2: 'border:1px solid rgba(150,150,150,0.5);background-color:rgba(255,255,255,0.05);color:#FFFFFF;',
     bgRed: '#910f20',
     bgOrange: '#9f6f03',
     bgYellow: '#6e680d',

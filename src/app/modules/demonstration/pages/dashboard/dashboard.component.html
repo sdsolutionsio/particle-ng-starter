@@ -809,39 +809,6 @@
     </particle-dialog>
   </particle-dialog>
 
-  <!-- LEFT PUSH CONTAINER -->
-  <particle-push-container
-    mainContentId="site-content"
-    side="left"
-    [width]="250"
-    topOffset="100px"
-    [closeOnResize]="true"
-    [showSidePanel]="true"
-    [hideCloseButton]="false"
-    (closed)="onPushContainerClose()"
-    #pushContainerLeft>
-    <div class="menu_color min_h40 pad_10 pad_x15 text md bold v_center">
-      Left Push Container
-    </div>
-    <div class="pad_10">
-      <div class="row bottom_left mar_5" style="height:32px;">
-        <div class="text md bolder">
-          This is a push container
-        </div>
-      </div>
-      <div class="overlay_alt2 hr mar_y15 mar_x5"></div>
-      <!-- informational text -->
-      <div class="mar_5 mar_y10 pad_bot5">
-        <div class="text sm paragraph">
-          The push container is a sidebar container that pushes the contents of the page over while it's opened.
-          It can be toggled to open or close, and the width and background color can be configured.
-          <br/><br/>
-          Try it now by clicking the toggle button at the top of the page, to the right of this sidebar.
-        </div>
-      </div>
-    </div>
-  </particle-push-container>
-
   <!-- RIGHT PUSH CONTAINER -->
   <particle-push-container
     mainContentId="site-content"
