@@ -20,6 +20,7 @@ import {
   ParticleProfilePicModule,
   ParticlePushContainerModule,
   ParticleRichTextModule,
+  ParticleSlideoverModule,
   ParticleSliderModule,
   ParticleThemingModule,
   ParticleTooltipModule,
@@ -57,7 +58,8 @@ import {DemonstrationRoutingModule} from './demonstration-routing.module';
     ParticleOrdinalNumberPipeModule,
     ParticleAccordionModule,
     ParticleThemingModule,
-    DemonstrationRoutingModule
+    DemonstrationRoutingModule,
+    ParticleSlideoverModule
   ],
   providers: [
     ThemingService

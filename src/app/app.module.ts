@@ -3,7 +3,12 @@ import {BrowserModule} from '@angular/platform-browser';
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
-import {LocalStorageService, ParticleAccordionModule, ParticlePushContainerModule} from '@sdsolutions/particle-ng';
+import {
+  LocalStorageService,
+  ParticleAccordionModule,
+  ParticlePushContainerModule,
+  ParticleScrollToTopModule
+} from '@sdsolutions/particle-ng';
 import {DemonstrationModule} from './modules/demonstration/demonstration.module';
 import {HeaderComponent} from './layout/header/header.component';
 import {FooterComponent} from './layout/footer/footer.component';
@@ -23,7 +28,8 @@ import {MenuComponent} from './layout/menu/menu.component';
     DemonstrationModule,
     AppRoutingModule,
     ParticlePushContainerModule,
-    ParticleAccordionModule
+    ParticleAccordionModule,
+    ParticleScrollToTopModule
   ],
   providers: [
     LocalStorageService
