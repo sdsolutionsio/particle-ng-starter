@@ -20,11 +20,12 @@
       <div class="">
         <particle-accordion
           [multiple]="true"
-          headerClass="bg_overlay_rev brdr pad_5 brad_3"
+          headerClass="pad_5 brad_3"
           textClass="md"
-          [showIcon]="false">
+          [showIcon]="true"
+          height="40px">
           <!-- Item 1 -->
-          <particle-accordion-item [open]="true" headerClass="bg_green brdr">
+          <particle-accordion-item [open]="true" headerClass="bg_green border_none">
             <ng-template particleAccordionHeader>
               <div class="text">
                 <i class="fas fa-dog"></i> General Styles
@@ -32,15 +33,19 @@
             </ng-template>
             <ng-template particleAccordionContent>
               <div class="pad_15 text sm">
-                SUBMENU OPTION 1<br/>
-                SUBMENU OPTION 2<br/>
-                SUBMENU OPTION 3<br/>
-                SUBMENU OPTION 4<br/>
+                <a class="btn access">Dashboard</a><br/>
+                <a>Accordion</a><br/>
+                <a>Background Carousel</a><br/>
+                <a>Color Picker</a><br/>
+                <a>Date Picker</a><br/>
+                <a>Dialog</a><br/>
+                <a>Dropdown</a><br/>
+
               </div>
             </ng-template>
           </particle-accordion-item>
           <!-- Item 2 -->
-          <particle-accordion-item [open]="true" headerClass="bg_red brdr">
+          <particle-accordion-item [open]="true" headerClass="bg_red border_none">
             <ng-template particleAccordionHeader>
               <div class="text">
                 <i class="fas fa-pencil"></i> Components
@@ -48,15 +53,20 @@
             </ng-template>
             <ng-template particleAccordionContent>
               <div class="pad_15 text sm">
-                SUBMENU OPTION 1<br/>
-                SUBMENU OPTION 2<br/>
-                SUBMENU OPTION 3<br/>
-                SUBMENU OPTION 4<br/>
+                <a>Endpoint State</a><br/>
+                <a>Icons/Picker</a><br/>
+                <a>Idle Timeout</a><br/>
+                <a>KeyFilter</a><br/>
+                <a>Multi-Select</a><br/>
+                <a>Notification</a><br/>
+                <a>Ordinal Pipes</a><br/>
+                <a>Paginator</a><br/>
+                <a>Popover</a><br/>
               </div>
             </ng-template>
           </particle-accordion-item>
           <!-- Item 3 -->
-          <particle-accordion-item [open]="true" headerClass="bg_blue brdr">
+          <particle-accordion-item [open]="true" headerClass="bg_blue border_none">
             <ng-template particleAccordionHeader>
               <div class="text">
                 <i class="fas fa-car"></i> Best Practices
@@ -64,10 +74,15 @@
             </ng-template>
             <ng-template particleAccordionContent>
               <div class="pad_15 text sm">
-                SUBMENU OPTION 1<br/>
-                SUBMENU OPTION 2<br/>
-                SUBMENU OPTION 3<br/>
-                SUBMENU OPTION 4<br/>
+                <a>Profile Pic</a><br/>
+                <a>Push Container</a><br/>
+                <a>Rich Text</a><br/>
+                <a>Scroll to Top</a><br/>
+                <a>Slideover</a><br/>
+                <a>Slider</a><br/>
+                <a>Theming</a><br/>
+                <a>Tooltip</a><br/>
+                <a>Week Picker</a>
               </div>
             </ng-template>
           </particle-accordion-item>

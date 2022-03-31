@@ -1,26 +1,34 @@
-<div class="row wrap_reverse page_container_color brdr mar_5 pad_5">
+<div class="row wrap_reverse page_container_color brdr mar_5 pad_15">
   <div class="col size_1 min_w280 pad_10">
-    <div class="page_container_color width100 pad_5 top_center brad_3">
-      <div class="brdr brad_3 pad_10 min_h150 center_center width100">
-        <particle-slider [(ngModel)]="sliderValue" unit="%"></particle-slider>
+    <div class="page_container_color width100 top_center brdr brad_3">
+      <div class="brad_3 pad_10 min_h150 min_h150 center_center width100 height100">
+        <div class="row_block width100">
+          <particle-slider [(ngModel)]="sliderValue" unit="%"></particle-slider>
+        </div>
+
       </div>
     </div>
   </div>
   <div class="col size_2 min_w280 pad_10">
-    <div class="page_container_color width100 pad_5 top_left">
+    <div class="page_container_color width100 top_left">
       <div class="row_block">
-        <div class="text lg bolder brdr border_bottom pad_top3 border_bottom5">Basic Slider</div>
+        <div class="row center_left text xlg bold brdr border_bottom border_bottom5 width100 bg_overlay_rev"><div class="bg_blue pad_5"><i class="fas fa-sliders-h"></i> </div><div class="mar_left10">Basic Slider</div></div>
         <div class="text md pad_top10 pad_bot5 hide_element">
           Lasagna onions garlic spinach pepperoni, pizza roll meatball pan philly chicken Chicago style bacon & tomato pesto steak. Philly chicken extra sauce philly steak deep crust. Ham green bell peppers party steak, bacon large meatball hand tossed mayo string cheese red onions spinach. Sausage bianca marinara, stuffed crust NY style bacon & tomato melted cheese black olives bbq garlic sauce string cheese burnt mouth bbq sauce mayo. Party philly chicken onions chicken wing pesto pineapple large sausage bianca.
+        </div>
+        <div class="row center_right">
+          <div class="circle_22px center_center bg_blue mar_5 btn hov_slide_up access"><i class="fab fa-github"></i></div>
+          <div class="circle_22px center_center bg_blue mar_5 btn hov_slide_up access"><i class="fas fa-code"></i></div>
         </div>
       </div>
     </div>
   </div>
 </div>
-<div class="row wrap_reverse page_container_color brdr mar_5 pad_5">
+
+<div class="row wrap_reverse page_container_color brdr mar_5 pad_15">
   <div class="col size_1 min_w280 pad_10">
-    <div class="page_container_color width100 pad_5 top_center brad_3">
-      <div class="brdr brad_3 pad_10 min_h150 center_center width100">
+    <div class="page_container_color width100 top_center brdr brad_3">
+      <div class="brad_3 pad_10 min_h150 min_h150 center_center width100 height100">
         <div class="width100">
           <particle-color-picker [(ngModel)]="colorPickerValue"
                                  (ngModelChange)="console.log(colorPickerValue); console.log('Color picker model change')"></particle-color-picker>
@@ -39,16 +47,290 @@
     </div>
   </div>
   <div class="col size_2 min_w280 pad_10">
-    <div class="page_container_color width100 pad_5 top_left">
+    <div class="page_container_color width100 top_left">
       <div class="row_block">
-        <div class="text lg bolder brdr border_bottom pad_top3 border_bottom5">Color Picker</div>
+        <div class="row center_left text xlg bold brdr border_bottom border_bottom5 width100 bg_overlay_rev"><div class="bg_blue pad_5"><i class="fas fa-palette"></i></div><div class="mar_left10">Color Picker</div></div>
         <div class="text md pad_top10 pad_bot5 hide_element">
-          Lasagna onions garlic spinach pepperoni, pizza roll meatball pan philly chicken Chicago style bacon & tomato pesto steak. Philly chicken extra sauce philly steak deep crust. Ham green bell peppers party steak, bacon large meatball hand tossed mayo string cheese red onions spinach. Sausage bianca marinara, stuffed crust NY style bacon & tomato melted cheese black olives bbq garlic sauce string cheese burnt mouth bbq sauce mayo. Party philly chicken onions chicken wing pesto pineapple large sausage bianca.
+          The color picker component is a simple way to choose/input a color in hexadecimal format. It offers a text input that allows for free entry in hexadecimal format along with a color picker for supported browsers. If the browser does not support the HTML5 color picker, it is replaced with a simple color swatch that acts as a preview of the contents of the text input.        </div>
+        <div class="row center_right">
+          <div class="circle_22px center_center bg_blue mar_5 btn hov_slide_up access"><i class="fab fa-github"></i></div>
+          <div class="circle_22px center_center bg_blue mar_5 btn hov_slide_up access"><i class="fas fa-code"></i></div>
         </div>
       </div>
     </div>
   </div>
 </div>
+
+<div class="row wrap_reverse page_container_color brdr mar_5 pad_15">
+  <div class="col size_1 min_w280 pad_10">
+    <div class="page_container_color width100 top_center brdr brad_3">
+      <div class="brad_3 pad_10 min_h150 center_center width100">
+        <div class="width100">
+          <!-- alpha text -->
+          <div class="form_label mar_bot5">Alpha Text Only</div>
+          <input particleKeyfilter="alpha" class="access input md"
+                 aria-label="Alpha Text Only" placeholder="Abc..."/>
+          <div class="pad_10"></div>
+          <!-- numeric text -->
+          <div class="form_label mar_bot5">Numeric Text Only</div>
+          <input particleKeyfilter="numeric" class="access input md"
+                 aria-label="Numeric Text Only" placeholder="123..."/>
+          <div class="pad_10"></div>
+          <!-- alphanumeric text with spaces -->
+          <div class="form_label mar_bot5">Alphanumeric Text Only (with spaces)</div>
+          <input particleKeyfilter="alphanumeric" [allowSpaces]="true" class="access input md"
+                 aria-label="Alphanumeric Text" placeholder="Abc 123..."/>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col size_2 min_w280 pad_10">
+    <div class="page_container_color width100 top_left">
+      <div class="row_block">
+        <div class="row center_left text xlg bold brdr border_bottom border_bottom5 width100 bg_overlay_rev"><div class="bg_blue pad_5"><i class="fas fa-sliders-h"></i></div> <div class="mar_left10">Keyfilter</div></div>
+        <div class="text md pad_top10 pad_bot5 hide_element">
+          Lasagna onions garlic spinach pepperoni, pizza roll meatball pan philly chicken Chicago style bacon & tomato pesto steak. Philly chicken extra sauce philly steak deep crust. Ham green bell peppers party steak, bacon large meatball hand tossed mayo string cheese red onions spinach. Sausage bianca marinara, stuffed crust NY style bacon & tomato melted cheese black olives bbq garlic sauce string cheese burnt mouth bbq sauce mayo. Party philly chicken onions chicken wing pesto pineapple large sausage bianca.
+        </div>
+        <div class="row center_right">
+          <div class="circle_22px center_center bg_blue mar_5 btn hov_slide_up access"><i class="fab fa-github"></i></div>
+          <div class="circle_22px center_center bg_blue mar_5 btn hov_slide_up access"><i class="fas fa-code"></i></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row wrap_reverse page_container_color brdr mar_5 pad_15">
+  <div class="col size_1 min_w280 pad_10">
+    <div class="page_container_color width100 top_center brdr brad_3">
+      <div class="brad_3 pad_10 min_h150 center_center width100">
+        <div class="row_block width100">
+          <div class="form_label mar_bot3">Basic Date Picker</div>
+          <particle-date-picker [(ngModel)]="datePickerValue"
+                                (ngModelChange)="console.log(datePickerValue); console.log('Date picker model change')"
+                                (dateSelected)="console.log($event); console.log('Date selected')"
+                                (input)="console.log('Date picker input')"
+                                [disabled]="false"
+                                [closeOnSelect]="true"
+                                [inputClassList]="'form_input page_container_color'"
+                                [calendarButtonClassList]="'bg_overlay brdr border_left brad_0'">
+          </particle-date-picker>
+          <div class="pad_10"></div>
+          <div class="form_label mar_bot3">Week Picker</div>
+          <particle-week-picker
+            [(ngModel)]="weekPickerValue"
+            (ngModelChange)="console.log(weekPickerValue); console.log('Week picker model change')"
+            (weekSelected)="console.log($event); console.log('Week selected');"
+            [closeOnSelect]="true"
+            [disabled]="false">
+          </particle-week-picker>
+          <div class="pad_10"></div>
+          <div class="form_label mar_bot3">Disabled date picker</div>
+          <particle-date-picker
+            [disabled]="true">
+          </particle-date-picker>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col size_2 min_w280 pad_10">
+    <div class="page_container_color width100 top_left">
+      <div class="row_block">
+        <div class="row center_left text xlg bold brdr border_bottom pad_bot5 border_bottom5"><i class="fa fa-calendar"></i> <div class="mar_left10">Date Picker</div></div>
+        <div class="text md pad_top10 pad_bot5 hide_element">
+          The date picker component allows the user to enter a date via a text input (in the form of month/day/year) or through a calendar widget.        </div>
+        <div class="row center_right">
+          <div class="circle_22px center_center bg_blue mar_5 btn hov_slide_up access"><i class="fab fa-github"></i></div>
+          <div class="circle_22px center_center bg_blue mar_5 btn hov_slide_up access"><i class="fas fa-code"></i></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row wrap_reverse page_container_color brdr mar_5 pad_15">
+  <div class="col size_2 min_w280 pad_10">
+    <div class="page_container_color width100 top_center brdr brad_3">
+      <div class="brad_3 pad_10 min_h150 center_center width100">
+        <div class="row_block width100">
+          <div class="form_label mar_bot3">Enter some formatted text below</div>
+          <particle-rich-text
+            [placeholder]="'Some placeholder text...'"
+            [(ngModel)]="textEditorValue"
+            (ngModelChange)="console.log(textEditorValue); console.log('text editor model change')"
+            (textChanged)="handleEditorTextChange($event)">
+          </particle-rich-text>
+          <div class="form_label mar_bot3 pad_top5">Render the text from the editor</div>
+          <div class="form_label mar_bot3">
+            <particle-render-rich-text [html]="textEditorValue"></particle-render-rich-text>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col size_1 min_w280 pad_10">
+    <div class="page_container_color width100 top_left">
+      <div class="row_block">
+        <div class="row center_left text xlg bold brdr border_bottom pad_bot5 border_bottom5"><i class="fas fa-edit"></i> <div class="mar_left10">Rich Text Editor</div></div>
+        <div class="text md pad_top10 pad_bot5 hide_element">
+          Lasagna onions garlic spinach pepperoni, pizza roll meatball pan philly chicken Chicago style bacon & tomato pesto steak. le bacon & tomato melted cheese black olives bbq garlic sauce string cheese burnt mouth bbq sauce mayo.
+        </div>
+        <div class="row center_right">
+          <div class="circle_22px center_center bg_blue mar_5 btn hov_slide_up access"><i class="fab fa-github"></i></div>
+          <div class="circle_22px center_center bg_blue mar_5 btn hov_slide_up access"><i class="fas fa-code"></i></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row wrap_reverse page_container_color brdr mar_5 pad_15">
+  <div class="col size_1 min_w280 pad_10">
+    <div class="page_container_color width100 top_center brdr brad_3">
+      <div class="brad_3 pad_10 min_h150 center_center width100">
+        <div class="row_block width100">
+          <div class="form_label mar_bot3">Basic Dropdown</div>
+          <particle-dropdown
+            [(ngModel)]="dropdownValue"
+            (ngModelChange)="console.log(dropdownValue); console.log('dropdown model changed')"
+            (change)="console.log(dropdownValue); console.log('dropdown value changed')"
+            [placeholder]="'Select an option...'"
+            [options]="[
+                           { value: 'red', label: 'Option A' },
+                           { value: 'green', label: 'Disabled Option', disabled: true },
+                           { value: 'blue', label: 'Option C' },
+                           {
+                             groupLabel: 'Option Group',
+                             options: [
+                               { value: 'darkPurple', label: 'Group Option 1' },
+                               { value: 'purple', label: 'Group Option $' },
+                               { value: 'lightPurple', label: 'Group Option X' }
+                             ]
+                           }
+                         ]"
+            [disabled]="false">
+          </particle-dropdown>
+          <div class="pad_10"></div>
+          <div class="form_label mar_bot3">Dropdown with Templating</div>
+          <particle-dropdown
+            [placeholder]="'Select a color...'"
+            [options]="[
+                           { value: 'red', label: 'Red', dataContext: { 'colorClass': 'bg_red' } },
+                           { value: 'green', label: 'Green', disabled: true, dataContext: { 'colorClass': 'bg_green' } },
+                           { value: 'blue', label: 'Blue', dataContext: { 'colorClass': 'bg_blue' } },
+                           {
+                             groupLabel: 'Purple Values',
+                             options: [
+                               { value: 'darkPurple', label: 'Dark Purple', dataContext: { 'colorClass': 'bg_purple_dark_4' } },
+                               { value: 'purple', label: 'Purple', dataContext: { 'colorClass': 'bg_purple' } },
+                               { value: 'lightPurple', label: 'Light Purple', dataContext: { 'colorClass': 'bg_purple_light_4' } }
+                             ]
+                           }
+                         ]"
+            [classList]="'form_input page_container_color'"
+            [disabled]="false">
+            <ng-template let-colorClass="colorClass" let-label>
+              <div class="circle_14px mar_right5" [ngClass]="colorClass"></div>
+              {{label}}
+            </ng-template>
+          </particle-dropdown>
+          <div class="pad_10"></div>
+          <div class="form_label mar_bot3">Disabled Dropdown</div>
+          <particle-dropdown
+            [placeholder]="'Select nothing...'"
+            [disabled]="true">
+          </particle-dropdown>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col size_2 min_w280 pad_10">
+    <div class="page_container_color width100 top_left">
+      <div class="row_block">
+        <div class="row center_left text xlg bold brdr border_bottom pad_bot5 border_bottom5"><i class="fas fa-sliders-h"></i> <div class="mar_left10">Dropdowns</div></div>
+        <div class="text md pad_top10 pad_bot5 hide_element">
+          The dropdown component acts as an enhanced HTML select. It supports both regular dropdown options (only the label being displayed) and templated options (options for which you can supply a ng-template to act as a template for each dropdown option). The dropdown is fully accessible as well, and supports all the accessibility options that a native select would (such as arrow key controls for option selection).        </div>
+        <div class="row center_right">
+          <div class="circle_22px center_center bg_blue mar_5 btn hov_slide_up access"><i class="fab fa-github"></i></div>
+          <div class="circle_22px center_center bg_blue mar_5 btn hov_slide_up access"><i class="fas fa-code"></i></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row wrap_reverse page_container_color brdr mar_5 pad_15">
+  <div class="col size_1 min_w280 pad_10 bg_overlay_rev">
+    <div class="page_container_color width100 top_center brdr brad_3">
+      <div class="brad_3 pad_10 min_h150 center_center width100">
+        <div class="row_block width100">
+          <div class="form_label mar_bot3">Basic MultiSelect</div>
+          <particle-multi-select
+            [options]="[
+                         { value: 'a', label: 'Option A' },
+                         { value: 'b', label: 'Disabled Option', disabled: true },
+                         { value: 'c', label: 'Option C' },
+                         {
+                           groupLabel: 'Option Group',
+                           options: [
+                             { value: '1', label: 'Group Option 1' },
+                             { value: '2', label: 'Group Option $' },
+                             { value: '3', label: 'Group Option X' }
+                           ]
+                         }
+                       ]"
+            [classList]="'form_input page_container_color'" [disabled]="false">
+          </particle-multi-select>
+          <div class="pad_10"></div>
+          <div class="form_label mar_bot3">Select one or more options from the dropdown below</div>
+          <particle-multi-select
+            [(ngModel)]="multiSelectValue"
+            (ngModelChange)="console.log(multiSelectValue); console.log('Multi-select model change')"
+            (change)="console.log(multiSelectValue); console.log('Multi-select value change')"
+            [placeholder]="'Select your favorite foods...'"
+            [options]="[
+                         { value: 'chicken', label: 'Chicken', dataContext: { 'iconClass': 'fas fa-drumstick-bite' } },
+                         { value: 'apples', label: 'Apples', disabled: true, dataContext: { 'iconClass': 'fas fa-apple-alt' } },
+                         { value: 'cheese', label: 'Cheese', dataContext: { 'iconClass': 'fas fa-cheese' } },
+                         {
+                           groupLabel: 'Forbidden Foods',
+                           options: [
+                             { value: 'lemon', label: 'Lemon', dataContext: { 'iconClass': 'fas fa-lemon' } },
+                             { value: 'stroopwafel', label: 'Stroopwafel', dataContext: { 'iconClass': 'fas fa-stroopwafel' } },
+                             { value: 'fish', label: 'Fish', dataContext: { 'iconClass': 'fas fa-fish' } }
+                           ]
+                         }
+                       ]"
+            [disabled]="false" [classList]="'input md bg_overlay brdr page_container_color'">
+            <ng-template let-iconClass="iconClass" let-label>
+              <i [ngClass]="iconClass + ' fa-fw mar_right5'"></i> {{label}}
+            </ng-template>
+          </particle-multi-select>
+          <div class="pad_10"></div>
+          <div class="form_label mar_bot3">Disabled MultiSelect</div>
+          <particle-multi-select
+            [disabled]="true">
+          </particle-multi-select>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col size_2 min_w280 pad_10">
+    <div class="page_container_color width100 top_left">
+      <div class="row_block">
+        <div class="row center_left text xlg bold brdr border_bottom border_bottom5 width100 bg_overlay_rev"><div class="bg_blue pad_5"><i class="fas fa-sliders-h"></i> </div><div class="mar_left10">Multi-Select</div></div>
+        <div class="text md pad_top10 pad_bot5 hide_element">
+          Lasagna onions garlic spinach pepperoni, pizza roll meatball pan philly chicken Chicago style bacon & tomato pesto steak. Philly chicken extra sauce philly steak deep crust. Ham green bell peppers party steak, bacon large meatball hand tossed mayo string cheese red onions spinach. Sausage bianca marinara, stuffed crust NY style bacon & tomato melted cheese black olives bbq garlic sauce string cheese burnt mouth bbq sauce mayo. Party philly chicken onions chicken wing pesto pineapple large sausage bianca.
+        </div>
+        <div class="row center_right">
+          <div class="circle_22px center_center bg_blue mar_5 btn hov_slide_up access"><i class="fab fa-github"></i></div>
+          <div class="circle_22px center_center bg_blue mar_5 btn hov_slide_up access"><i class="fas fa-code"></i></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- CONTENT -->
 <div class="row column pad_5" style="margin-top: 300px;">
 
