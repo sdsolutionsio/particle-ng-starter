@@ -1,7 +1,7 @@
 <div class="row wrap_reverse page_container_color brdr mar_5 pad_15">
   <div class="col size_1 min_w280 pad_10">
     <div class="page_container_color width100 top_center brdr brad_3">
-      <div class="brad_3 pad_10 min_h150 min_h150 center_center width100 height100">
+      <div class="brad_3 pad_10 min_h150 min_h150 center_center width100 min_h200">
         <div class="row_block width100">
           <particle-slider [(ngModel)]="sliderValue" unit="%"></particle-slider>
         </div>
@@ -330,6 +330,42 @@
     </div>
   </div>
 </div>
+
+<div class="row wrap_reverse page_container_color brdr mar_5 pad_15">
+  <div class="col size_1 min_w280 pad_10">
+    <div class="page_container_color width100 top_center brdr brad_3">
+      <div class="brad_3 pad_10 min_h150 min_h150 center_center width100 height100">
+        <div class="row_block width100">
+          <div class="page_container_color_dark_1 v_center pad_10 pad_x15 text lg bold mar_top5">
+            <div class="circle_20px bg_purple mar_right5"><i class="far fa-window-restore"></i></div>
+            Dialog
+          </div>
+          <div class="pad_15">
+            <div class="form_label mar_bot5">Select the button below to preview the dialog</div>
+            <button class="access btn sm bg_overlay brdr bg_purple_alt" (click)="obj2 = {}">
+              Preview Dialog
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col size_2 min_w280 pad_10">
+    <div class="page_container_color width100 top_left">
+      <div class="row_block">
+        <div class="row center_left text xlg bold brdr border_bottom border_bottom5 width100 bg_overlay_rev"><div class="bg_blue pad_5"><i class="fas fa-sliders-h"></i> </div><div class="mar_left10">Dialog</div></div>
+        <div class="text md pad_top10 pad_bot5 hide_element">
+          Lasagna onions garlic spinach pepperoni, pizza roll meatball pan philly chicken Chicago style bacon & tomato pesto steak. Philly chicken extra sauce philly steak deep crust. Ham green bell peppers party steak, bacon large meatball hand tossed mayo string cheese red onions spinach. Sausage bianca marinara, stuffed crust NY style bacon & tomato melted cheese black olives bbq garlic sauce string cheese burnt mouth bbq sauce mayo. Party philly chicken onions chicken wing pesto pineapple large sausage bianca.
+        </div>
+        <div class="row center_right">
+          <div class="circle_22px center_center bg_blue mar_5 btn hov_slide_up access"><i class="fab fa-github"></i></div>
+          <div class="circle_22px center_center bg_blue mar_5 btn hov_slide_up access"><i class="fas fa-code"></i></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 <!-- CONTENT -->
 <div class="row column pad_5" style="margin-top: 300px;">
