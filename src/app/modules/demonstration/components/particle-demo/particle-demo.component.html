@@ -1,0 +1,32 @@
+<div class="row wrap_reverse page_container_color brdr mar_5 pad_15" *ngIf="componentDetails">
+  <div class="col size_1 min_w280 pad_10">
+    <div class="page_container_color width100 top_center brdr brad_3">
+      <div class="brad_3 pad_10 min_h150 min_h150 center_center width100 min_h200">
+        <div class="row_block width100">
+          <ng-content></ng-content>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col size_2 min_w280 pad_10">
+    <div class="page_container_color width100 top_left">
+      <div class="row_block">
+        <div class="row center_left text xlg bold brdr border_bottom border_bottom5 width100 bg_overlay_rev">
+          <div class="bg_blue pad_5">
+            <i class="fas {{componentDetails.icon}}"></i>
+          </div>
+          <div class="mar_left10">
+            {{componentDetails.name}}
+          </div>
+        </div>
+        <div class="text md pad_top10 pad_bot5 hide_element">
+          <particle-render-rich-text [html]="componentDetails.description"></particle-render-rich-text>
+        </div>
+        <div class="row center_right">
+          <div class="circle_22px center_center bg_blue mar_5 btn hov_slide_up access"><i class="fab fa-github"></i></div>
+          <div class="circle_22px center_center bg_blue mar_5 btn hov_slide_up access"><i class="fas fa-code"></i></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -29,10 +29,12 @@ import {
 } from '@sdsolutions/particle-ng';
 
 import {DemonstrationRoutingModule} from './demonstration-routing.module';
+import { ParticleDemoComponent } from './components/particle-demo/particle-demo.component';
 
 @NgModule({
   declarations: [
-    DashboardComponent
+    DashboardComponent,
+    ParticleDemoComponent
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,8 @@
 import {Component, ViewChild} from '@angular/core';
 import {Notification, NotificationService, PushContainerComponent} from '@sdsolutions/particle-ng';
 import {endOfWeek, startOfWeek} from 'date-fns';
+import {ComponentDetails} from "../../models/component-details.model";
+import {AllComponents} from "../../models/all-components.model";
 
 @Component({
   selector: 'app-dashboard',
@@ -96,6 +98,8 @@ export class DashboardComponent {
   colorPickerValue = '#44ff55';
 
   sliderValue = 69;
+
+  allComponents = new AllComponents();
 
   /**
    * Constructor
