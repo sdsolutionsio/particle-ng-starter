@@ -39,7 +39,7 @@
             <ng-template particleAccordionContent>
               <div class="pad_15 text sm">
                 <a class="btn access">Dashboard</a><br/>
-                <a>Accordion</a><br/>
+                <a (click)="navigate('demo', 'accordion')">Accordion</a><br/>
                 <a>Background Carousel</a><br/>
                 <a>Color Picker</a><br/>
                 <a>Date Picker</a><br/>
@@ -58,7 +58,7 @@
             </ng-template>
             <ng-template particleAccordionContent>
               <div class="pad_15 text sm">
-                <a>Endpoint State</a><br/>
+                <a (click)="navigate('demo', 'endpoint-state')">Endpoint State</a><br/>
                 <a>Icons/Picker</a><br/>
                 <a>Idle Timeout</a><br/>
                 <a>KeyFilter</a><br/>

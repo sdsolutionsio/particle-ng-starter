@@ -1,14 +1,14 @@
-import {Component, ViewChild} from '@angular/core';
+import {AfterViewInit, Component, ViewChild} from '@angular/core';
 import {Notification, NotificationService, PushContainerComponent} from '@sdsolutions/particle-ng';
 import {endOfWeek, startOfWeek} from 'date-fns';
-import {ComponentDetails} from "../../models/component-details.model";
 import {AllComponents} from "../../models/all-components.model";
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html'
 })
-export class DashboardComponent {
+export class DashboardComponent implements AfterViewInit {
 
   readonly console = console;
 
@@ -101,12 +101,32 @@ export class DashboardComponent {
 
   allComponents = new AllComponents();
 
+  lastFragment = '';
+  timeoutAmount = 600;
+
   /**
    * Constructor
    */
   constructor(
-    private notificationService: NotificationService
+    private notificationService: NotificationService,
+    private route: ActivatedRoute
   ) { }
+
+  ngAfterViewInit(): void {
+    this.route.fragment.subscribe({
+      next: fragment => {
+        if (fragment != this.lastFragment) {
+          this.lastFragment = fragment as string;
+          setTimeout( () => {
+            if (fragment && document.getElementById(fragment) != null) {
+              (document.getElementById(fragment) as HTMLElement).scrollIntoView({block: 'start', behavior: 'smooth'});
+              this.timeoutAmount = 0;
+            }
+          }, this.timeoutAmount);
+        }
+      }
+    });
+  }
 
   /**
    * Icon Selected event handler.
