@@ -102,7 +102,7 @@ export class DashboardComponent implements AfterViewInit {
   allComponents = new AllComponents();
 
   lastFragment = '';
-  timeoutAmount = 600;
+  timeoutAmount = 800;
 
   /**
    * Constructor
