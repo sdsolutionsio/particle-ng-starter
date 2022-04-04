@@ -1,10 +1,10 @@
 <!-- navbar -->
 <nav class="nav_color" style="height:100px;">
   <div class="row">
-    <div class="nav_logo_box center_left">
+    <div class="center_left">
       <a routerLink="">
-        <div class="menu_color center_center text sm bg_overlay min_h50 mar_10" style="width:230px;">
-          PARTICLE
+        <div class="center_center mar_15" style="width:90px;">
+          <img src="https://i.pinimg.com/originals/36/25/f4/3625f46b380a380dc4e7dd847d2bb091.gif" width="90px;">
         </div>
       </a>
       <a routerLink="">
@@ -16,9 +16,10 @@
     </div>
 
   </div>
-  <div class="center_right mar_right10">
-    <div class="nav_name mobile_only">
-      <button class="btn pad_3 brad_3 bg_overlay" (click)="showMenu()"><i class="fas fa-bars fa-fw"></i></button>
+  <div class="center_right mar_right15">
+    <div class="row hide_element center_right"><div class="text sm mar_right10">Hello, Samus Aran</div><i class="fa fa-user-astronaut fa-2x"></i></div>
+    <div class="mobile_only">
+      <button class="btn access pad_3 brdr brad_3 nav_color" (click)="showMenu()"><i class="fas fa-bars fa-2x"></i></button>
     </div>
   </div>
 </nav>

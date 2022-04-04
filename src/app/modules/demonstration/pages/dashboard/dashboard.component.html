@@ -315,17 +315,16 @@
 
 <!-- ACCORDION -->
 <app-particle-demo [componentDetails]="allComponents.accordion" id="accordion">
-  <div  class="scroll_yauto">
-    <p class="pad_15 text lg">Default</p>
-    <div class="pad_15">
-      <particle-accordion>
+  <div class="pad_5 scroll_yauto" style="max-height: 250px;">
+    <p class="pad_5 text lg">Default</p>
+    <div>
+      <particle-accordion class="scroll_yauto" style="max-height: 200px;">
         <!-- Item 1 -->
         <particle-accordion-item header="Header I">
           <ng-template particleAccordionContent>
             <div class="pad_15 text md">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-              aliquip ex ea commodo consequat.
+              dolore magna aliqua.
             </div>
           </ng-template>
         </particle-accordion-item>
@@ -334,8 +333,7 @@
           <ng-template particleAccordionContent>
             <div class="pad_15 text md">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-              aliquip ex ea commodo consequat.
+              dolore magna aliqua.
             </div>
           </ng-template>
         </particle-accordion-item>
@@ -344,8 +342,7 @@
           <ng-template particleAccordionContent>
             <div class="pad_15 text md">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-              aliquip ex ea commodo consequat.
+              dolore magna aliqua.
             </div>
           </ng-template>
         </particle-accordion-item>
@@ -354,8 +351,7 @@
           <ng-template particleAccordionContent>
             <div class="pad_15 text md">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-              aliquip ex ea commodo consequat.
+              dolore magna aliqua.
             </div>
           </ng-template>
         </particle-accordion-item>
@@ -377,8 +373,7 @@
           <ng-template particleAccordionContent>
             <div class="pad_15 text md">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-              aliquip ex ea commodo consequat.
+              dolore magna aliqua.
             </div>
           </ng-template>
         </particle-accordion-item>
@@ -387,8 +382,7 @@
           <ng-template particleAccordionContent>
             <div class="pad_15 text md">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-              aliquip ex ea commodo consequat.
+              dolore magna aliqua.
             </div>
           </ng-template>
         </particle-accordion-item>
@@ -397,8 +391,7 @@
           <ng-template particleAccordionContent>
             <div class="pad_15 text md">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-              aliquip ex ea commodo consequat.
+              dolore magna aliqua.
             </div>
           </ng-template>
         </particle-accordion-item>
@@ -488,12 +481,14 @@
 
 <!-- ICONS -->
 <app-particle-demo [componentDetails]="allComponents.icons">
-  <div class="row wrap">
-    <div *ngFor="let icon of icons" class="col size_1 min_w100 column center_center mar_5">
-      <div class="col size_1 center_center">
-        <i class="wis {{icon.class}} fa fa-fw"></i>
+  <div class="pad_5 scroll_yauto" style="max-height: 250px;">
+    <div class="row wrap">
+      <div *ngFor="let icon of icons" class="col size_1 min_w100 column center_center mar_5">
+        <div class="col size_1 center_center">
+          <i class="wis {{icon.class}} fa fa-fw"></i>
+        </div>
+        <div class="text sm center mar_top5">{{icon.class}}</div>
       </div>
-      <div class="text sm center mar_top5">{{icon.class}}</div>
     </div>
   </div>
 </app-particle-demo>
@@ -558,7 +553,7 @@
   </particle-dialog>
 </particle-dialog>
 
-<!-- RIGHT PUSH CONTAINER -->
+<!-- RIGHT PUSH CONTAINER
 <particle-push-container
   mainContentId="site-content"
   side="right"
@@ -578,14 +573,13 @@
       </div>
     </div>
     <div class="bg_overlay brdr hr mar_y15 mar_x5"></div>
-    <!-- informational text -->
     <div class="mar_5 mar_y10 pad_bot5">
       <particle-theming></particle-theming>
     </div>
     <div class="center_center mar_5 mar_y10 pad_bot5 pad_top5 brad_3 brdr test">COOL COLOR VARIABLES</div>
   </div>
 </particle-push-container>
-
+-->
 <!-- NOTIFICATION CONTAINER -->
 <particle-notification></particle-notification>
 
