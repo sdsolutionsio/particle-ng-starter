@@ -10,13 +10,13 @@
   #pushContainerLeft>
 
   <div class="row_block">
-    <div class="row bottom_left pad_10 min_h45 border_bottom brdr">
-      <div class="text md bolder">
-        Here are your options
+    <div class="row center_left pad_10 min_h45 ">
+      <div class="text sm bolder">
+        <i class="fa fa-arrow-left"></i> SHOW IN MOBILE [user prefs]
       </div>
     </div>
     <!-- informational text -->
-    <div class="width100 mar_y10 pad_bot5">
+    <div class="width100 pad_bot5">
       <div class="">
         <particle-accordion
           [multiple]="true"
@@ -37,15 +37,15 @@
               </div>
             </ng-template>
             <ng-template particleAccordionContent>
-              <div class="pad_15 text sm">
-                <a class="btn access">Dashboard</a><br/>
-                <a (click)="navigate('demo', 'accordion')">Accordion</a><br/>
-                <a>Background Carousel</a><br/>
-                <a>Color Picker</a><br/>
-                <a>Date Picker</a><br/>
-                <a>Dialog</a><br/>
-                <a>Dropdown</a><br/>
-
+              <div class="bg_green pad_3 text sm">
+                <div class="bg_overlay_rev pad_x20 pad_y5">
+                  <button class="btn access hov_slide_right clear" (click)="navigate('demo', 'accordion')">Accordion</button><br/>
+                  <button class="btn access hov_slide_right clear">Background Carousel</button><br/>
+                  <button class="btn access hov_slide_right clear">Color Picker</button><br/>
+                  <button class="btn access hov_slide_right clear">Date Picker</button><br/>
+                  <button class="btn access hov_slide_right clear">Dialog</button><br/>
+                  <button class="btn access hov_slide_right clear">Dropdown</button><br/>
+                </div>
               </div>
             </ng-template>
           </particle-accordion-item>

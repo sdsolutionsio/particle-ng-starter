@@ -315,104 +315,107 @@
 
 <!-- ACCORDION -->
 <app-particle-demo [componentDetails]="allComponents.accordion" id="accordion">
-  <p class="pad_15 text lg">Default</p>
-  <div class="pad_15">
-    <particle-accordion>
-      <!-- Item 1 -->
-      <particle-accordion-item header="Header I">
-        <ng-template particleAccordionContent>
-          <div class="pad_15 text md">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
-          </div>
-        </ng-template>
-      </particle-accordion-item>
-      <!-- Item 2 -->
-      <particle-accordion-item header="Header II">
-        <ng-template particleAccordionContent>
-          <div class="pad_15 text md">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
-          </div>
-        </ng-template>
-      </particle-accordion-item>
-      <!-- Item 3 -->
-      <particle-accordion-item header="Header III">
-        <ng-template particleAccordionContent>
-          <div class="pad_15 text md">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
-          </div>
-        </ng-template>
-      </particle-accordion-item>
-      <!-- Item 4 -->
-      <particle-accordion-item header="Header IV (Disabled)" [disabled]="true">
-        <ng-template particleAccordionContent>
-          <div class="pad_15 text md">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
-          </div>
-        </ng-template>
-      </particle-accordion-item>
-    </particle-accordion>
+  <div  class="scroll_yauto">
+    <p class="pad_15 text lg">Default</p>
+    <div class="pad_15">
+      <particle-accordion>
+        <!-- Item 1 -->
+        <particle-accordion-item header="Header I">
+          <ng-template particleAccordionContent>
+            <div class="pad_15 text md">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+              aliquip ex ea commodo consequat.
+            </div>
+          </ng-template>
+        </particle-accordion-item>
+        <!-- Item 2 -->
+        <particle-accordion-item header="Header II">
+          <ng-template particleAccordionContent>
+            <div class="pad_15 text md">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+              aliquip ex ea commodo consequat.
+            </div>
+          </ng-template>
+        </particle-accordion-item>
+        <!-- Item 3 -->
+        <particle-accordion-item header="Header III">
+          <ng-template particleAccordionContent>
+            <div class="pad_15 text md">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+              aliquip ex ea commodo consequat.
+            </div>
+          </ng-template>
+        </particle-accordion-item>
+        <!-- Item 4 -->
+        <particle-accordion-item header="Header IV (Disabled)" [disabled]="true">
+          <ng-template particleAccordionContent>
+            <div class="pad_15 text md">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+              aliquip ex ea commodo consequat.
+            </div>
+          </ng-template>
+        </particle-accordion-item>
+      </particle-accordion>
+    </div>
+
+    <!-- Multiple -->
+    <p class="pad_15 text lg">Multiple</p>
+    <div class="pad_15">
+      <particle-accordion
+        [multiple]="true"
+        headerClass="border_none"
+        height=""
+        textClass="sm"
+        iconCollapsed="far fa-plus-square"
+        iconExpanded="far fa-minus-square">
+        <!-- Item 1 -->
+        <particle-accordion-item header="Header I">
+          <ng-template particleAccordionContent>
+            <div class="pad_15 text md">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+              aliquip ex ea commodo consequat.
+            </div>
+          </ng-template>
+        </particle-accordion-item>
+        <!-- Item 2 -->
+        <particle-accordion-item header="Header II">
+          <ng-template particleAccordionContent>
+            <div class="pad_15 text md">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+              aliquip ex ea commodo consequat.
+            </div>
+          </ng-template>
+        </particle-accordion-item>
+        <!-- Item 3 -->
+        <particle-accordion-item header="Header III">
+          <ng-template particleAccordionContent>
+            <div class="pad_15 text md">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+              aliquip ex ea commodo consequat.
+            </div>
+          </ng-template>
+        </particle-accordion-item>
+        <!-- Item 4 -->
+        <particle-accordion-item header="Header IV (Disabled)" [disabled]="true">
+          <ng-template particleAccordionContent>
+            <div class="pad_15 text md">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+              aliquip ex ea commodo consequat.
+            </div>
+          </ng-template>
+        </particle-accordion-item>
+      </particle-accordion>
+    </div>
   </div>
 
-  <!-- Multiple -->
-  <p class="pad_15 text lg">Multiple</p>
-  <div class="pad_15">
-    <particle-accordion
-      [multiple]="true"
-      headerClass="border_none"
-      height=""
-      textClass="sm"
-      iconCollapsed="far fa-plus-square"
-      iconExpanded="far fa-minus-square">
-      <!-- Item 1 -->
-      <particle-accordion-item header="Header I">
-        <ng-template particleAccordionContent>
-          <div class="pad_15 text md">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
-          </div>
-        </ng-template>
-      </particle-accordion-item>
-      <!-- Item 2 -->
-      <particle-accordion-item header="Header II">
-        <ng-template particleAccordionContent>
-          <div class="pad_15 text md">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
-          </div>
-        </ng-template>
-      </particle-accordion-item>
-      <!-- Item 3 -->
-      <particle-accordion-item header="Header III">
-        <ng-template particleAccordionContent>
-          <div class="pad_15 text md">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
-          </div>
-        </ng-template>
-      </particle-accordion-item>
-      <!-- Item 4 -->
-      <particle-accordion-item header="Header IV (Disabled)" [disabled]="true">
-        <ng-template particleAccordionContent>
-          <div class="pad_15 text md">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
-          </div>
-        </ng-template>
-      </particle-accordion-item>
-    </particle-accordion>
-  </div>
 </app-particle-demo>
 
 <!-- PAGINATOR -->
