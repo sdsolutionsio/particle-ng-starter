@@ -21,6 +21,10 @@ export class MenuComponent {
 
   navigate(page: string, fragment: string): void {
     this.router.navigate([page], {fragment}).then();
+
+    if (window.innerWidth <= 768) {
+      this.pushContainerLeft.close();
+    }
   }
 
 }
