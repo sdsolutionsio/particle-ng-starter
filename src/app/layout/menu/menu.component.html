@@ -10,6 +10,9 @@
   #pushContainerLeft>
 
   <div class="row_block">
+    <div class="bgimage min_h100">
+
+    </div>
     <!-- informational text -->
     <div class="width100 pad_bot5">
       <div class="">
@@ -32,27 +35,30 @@
               </div>
             </ng-template>
             <ng-template particleAccordionContent>
-
-                <div class="bg_purple pad_x20 pad_y10">
-                  <button class="btn access hov_slide_right clear" (click)="navigate('demo', 'accordion')">Accordion</button><br/>
-                  <button class="btn access hov_slide_right clear">Background Carousel</button><br/>
-                  <button class="btn access hov_slide_right clear">Color Picker</button><br/>
-                  <button class="btn access hov_slide_right clear">Date Picker</button><br/>
-                  <button class="btn access hov_slide_right clear">Dialog</button><br/>
-                  <button class="btn access hov_slide_right clear">Dropdown</button><br/>
-                </div>
-
+              <div class="bg_purple_light_1 pad_x20 pad_y10">
+                <button class="btn access hov_slide_right clear" (click)="navigate('demo', 'accordion')">Accordion</button><br/>
+                <button class="btn access hov_slide_right clear">Background Carousel</button><br/>
+                <button class="btn access hov_slide_right clear">Color Picker</button><br/>
+                <button class="btn access hov_slide_right clear">Date Picker</button><br/>
+                <button class="btn access hov_slide_right clear">Dialog</button><br/>
+                <button class="btn access hov_slide_right clear">Dropdown</button><br/>
+              </div>
             </ng-template>
           </particle-accordion-item>
           <!-- Item 2 -->
           <particle-accordion-item [open]="true" headerClass="bg_red border_none">
             <ng-template particleAccordionHeader>
-              <div class="text bolder">
-                <i class="fas fa-pencil"></i> Components
+                <div class="space_between width100">
+                <div class="text bolder">
+                  <i class="fas fa-pencil"></i> Components
+                </div>
+                <div>
+                  <i class="fas fa-fw fa-caret-down"></i>
+                </div>
               </div>
             </ng-template>
             <ng-template particleAccordionContent>
-              <div class="bg_red pad_x20 pad_y10">
+              <div class="bg_red_light_1 pad_x20 pad_y10">
                 <button class="btn access hov_slide_right clear" (click)="navigate('demo', 'endpoint-state')">Endpoint State</button><br/>
                 <button class="btn access hov_slide_right clear">Icons/Picker</button><br/>
                 <button class="btn access hov_slide_right clear">Idle Timeout</button><br/>
@@ -68,12 +74,17 @@
           <!-- Item 3 -->
           <particle-accordion-item [open]="true" headerClass="bg_blue border_none">
             <ng-template particleAccordionHeader>
-              <div class="text bolder">
-                <i class="fas fa-car"></i> Best Practices
+              <div class="space_between width100">
+                <div class="text bolder">
+                  <i class="fas fa-car"></i> Best Practices
+                </div>
+                <div>
+                  <i class="fas fa-fw fa-caret-down"></i>
+                </div>
               </div>
             </ng-template>
             <ng-template particleAccordionContent>
-              <div class="bg_blue pad_x20 pad_y10">
+              <div class="bg_blue_light_1 pad_x20 pad_y10">
                 <button class="btn access hov_slide_right clear">Profile Pic</button><br/>
                 <button class="btn access hov_slide_right clear">Push Container</button><br/>
                 <button class="btn access hov_slide_right clear">Rich Text</button><br/>

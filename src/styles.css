@@ -5,3 +5,8 @@
   background-color: var(--bg-purple-color);
   color: var(--body-color);
 }
+.bgimage{
+  background-image: url('https://images5.alphacoders.com/432/thumb-1920-432766.jpg');
+  background-size: cover;
+  background-position: center;
+}

@@ -5,7 +5,7 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {
   LocalStorageService,
-  ParticleAccordionModule,
+  ParticleAccordionModule, ParticlePopoverModule, ParticleProfilePicModule,
   ParticlePushContainerModule,
   ParticleScrollToTopModule
 } from '@sdsolutions/particle-ng';
@@ -29,7 +29,9 @@ import {MenuComponent} from './layout/menu/menu.component';
     AppRoutingModule,
     ParticlePushContainerModule,
     ParticleAccordionModule,
-    ParticleScrollToTopModule
+    ParticleScrollToTopModule,
+    ParticlePopoverModule,
+    ParticleProfilePicModule
   ],
   providers: [
     LocalStorageService

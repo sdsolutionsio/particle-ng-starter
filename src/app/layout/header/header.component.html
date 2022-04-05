@@ -17,7 +17,40 @@
 
   </div>
   <div class="center_right mar_right15">
-    <div class="row hide_element center_right"><div class="text sm mar_right10">Hello, Samus Aran</div><i class="fa fa-user-astronaut fa-2x"></i></div>
+    <div class="hide_element">
+      <particle-popover width="300" height="200" #popover>
+        <div class="row_block">
+          <div class="row min_h50">
+            <div class="row center_left pad_10">
+              <particle-profile-pic
+                toolTip="Philip J Fry"
+                imageUrl="http://www.pixlb.it/media/avatars/1.png">
+              </particle-profile-pic>
+              <div class="pad_10">
+                <div class="text md bolder">Philip J. Fry</div>
+                <div class="text sm">DOB: August 14, 1974</div>
+              </div>
+            </div>
+          </div>
+          <div class="pad_10 brdr brad_3 mar_5">
+            <button class="btn access hov_slide_right clear">View my Details</button><br/>
+            <button class="btn access hov_slide_right clear">Check my Inbox</button><br/>
+            <button class="btn access hov_slide_right clear">Dance Around Like an Idiot</button><br/>
+            <button class="btn access hov_slide_right clear">Logout</button><br/>
+          </div>
+          <div class="center_right ">
+            <button (click)="popover.toggle($event)" class="access btn bg_overlay brdr text sm bolder mar_5 clear">
+              CLOSE
+            </button>
+          </div>
+        </div>
+
+      </particle-popover>
+    </div>
+    <div class="row hide_element center_right">
+      <div class="text sm mar_right10">Hello, Samus Aran</div>
+      <button (click)="popover.toggle($event)" class="btn access clear hov_slide_up"><i class="fa fa-user-astronaut fa-2x"></i></button>
+    </div>
     <div class="mobile_only">
       <button class="btn access pad_3 brdr brad_3 nav_color" (click)="showMenu()"><i class="fas fa-bars fa-2x"></i></button>
     </div>
