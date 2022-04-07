@@ -1,11 +1,11 @@
 
 <!-- SLIDER -->
-<app-particle-demo [componentDetails]="allComponents.slider">
+<app-particle-demo [componentDetails]="allComponents.slider" id="slider">
   <particle-slider [(ngModel)]="sliderValue" unit="%"></particle-slider>
 </app-particle-demo>
 
 <!-- COLOR PICKER -->
-<app-particle-demo [componentDetails]="allComponents.colorPicker">
+<app-particle-demo [componentDetails]="allComponents.colorPicker" id="color_picker">
   <particle-color-picker [(ngModel)]="colorPickerValue"
                          (ngModelChange)="console.log(colorPickerValue); console.log('Color picker model change')"></particle-color-picker>
   <div class="pad_10"></div>
@@ -21,7 +21,7 @@
 </app-particle-demo>
 
 <!-- KEYFILTER -->
-<app-particle-demo [componentDetails]="allComponents.keyFilter">
+<app-particle-demo [componentDetails]="allComponents.keyFilter" id="keyfilter">
   <!-- alpha text -->
   <div class="form_label mar_bot5">Alpha Text Only</div>
   <input particleKeyfilter="alpha" class="access input md"
@@ -39,7 +39,7 @@
 </app-particle-demo>
 
 <!-- DATE PICKER -->
-<app-particle-demo [componentDetails]="allComponents.datePicker">
+<app-particle-demo [componentDetails]="allComponents.datePicker" id="date_picker">
   <div class="form_label mar_bot3">Basic Date Picker</div>
   <particle-date-picker [(ngModel)]="datePickerValue"
                         (ngModelChange)="console.log(datePickerValue); console.log('Date picker model change')"
@@ -67,7 +67,7 @@
 </app-particle-demo>
 
 <!-- RICH TEXT EDITOR -->
-<app-particle-demo [componentDetails]="allComponents.richText">
+<app-particle-demo [componentDetails]="allComponents.richText" id="rich_text_editor">
   <div class="form_label mar_bot3">Enter some formatted text below</div>
   <particle-rich-text
     [placeholder]="'Some placeholder text...'"
@@ -82,7 +82,7 @@
 </app-particle-demo>
 
 <!-- DROPDOWNS -->
-<app-particle-demo [componentDetails]="allComponents.dropdowns">
+<app-particle-demo [componentDetails]="allComponents.dropdowns" id="dropdowns">
   <particle-dropdown
     [(ngModel)]="dropdownValue"
     (ngModelChange)="console.log(dropdownValue); console.log('dropdown model changed')"
@@ -136,7 +136,7 @@
 </app-particle-demo>
 
 <!-- MULTI SELECT -->
-<app-particle-demo [componentDetails]="allComponents.multiSelect">
+<app-particle-demo [componentDetails]="allComponents.multiSelect" id="multi_select">
   <div class="form_label mar_bot3">Basic MultiSelect</div>
   <particle-multi-select
     [options]="[
@@ -187,7 +187,7 @@
 </app-particle-demo>
 
 <!-- DIALOG -->
-<app-particle-demo [componentDetails]="allComponents.dialog">
+<app-particle-demo [componentDetails]="allComponents.dialog" id="dialog">
   <div class="form_label mar_bot5">Select the button below to preview the dialog</div>
   <button class="access btn sm brdr bg_purple_alt" (click)="obj2 = {}">
     Preview Dialog
@@ -195,7 +195,7 @@
 </app-particle-demo>
 
 <!-- ICON SELECT -->
-<app-particle-demo [componentDetails]="allComponents.iconSelect">
+<app-particle-demo [componentDetails]="allComponents.iconSelect" id="icon_picker">
   <particle-icon-select [(ngModel)]="icon"
                         (opened)="iconSelectOpened()"
                         (closed)="iconSelectClosed()"
@@ -205,7 +205,7 @@
 </app-particle-demo>
 
 <!-- POPOVER -->
-<app-particle-demo [componentDetails]="allComponents.popOver">
+<app-particle-demo [componentDetails]="allComponents.popOver" id="pop_over">
   <button class="access btn sm bg_overlay brdr bg_grey_alt" (click)="popover.toggle($event)">
     Preview Popover
   </button>
@@ -220,7 +220,7 @@
 </app-particle-demo>
 
 <!-- SLIDEOVER -->
-<app-particle-demo [componentDetails]="allComponents.slideOver">
+<app-particle-demo [componentDetails]="allComponents.slideOver" id="slide_over">
   <div class="pad_15">
     <div class="form_label mar_bot5">Test each slide over type below</div>
     <button class="access btn sm bg_overlay brdr bg_grey_alt mar_5" (click)="slideoverLeft.toggle()">
@@ -259,7 +259,7 @@
 </app-particle-demo>
 
 <!-- NOTIFICATIONS -->
-<app-particle-demo [componentDetails]="allComponents.notifications">
+<app-particle-demo [componentDetails]="allComponents.notifications" id="notifications">
   <div class="form_label mar_bot5">Select a button below to preview a notification type</div>
   <div class="row wrap v_center">
     <button (click)="addNotification('success')"
@@ -282,7 +282,7 @@
 </app-particle-demo>
 
 <!-- TOOLTIPS -->
-<app-particle-demo [componentDetails]="allComponents.toolTips">
+<app-particle-demo [componentDetails]="allComponents.toolTips" id="tooltips">
   <div class="pad_15">
     <div class="form_label mar_bot5">Hover a box below to see a tooltip</div>
     <div class="row wrap v_center" style="margin:0 -5px;">
@@ -307,7 +307,7 @@
 </app-particle-demo>
 
 <!-- THEMING -->
-<app-particle-demo [componentDetails]="allComponents.theming">
+<app-particle-demo [componentDetails]="allComponents.theming" id="theming">
   <div class="pad_15">
     <particle-theming></particle-theming>
   </div>
@@ -412,7 +412,7 @@
 </app-particle-demo>
 
 <!-- PAGINATOR -->
-<app-particle-demo [componentDetails]="allComponents.paginator">
+<app-particle-demo [componentDetails]="allComponents.paginator" id="paginator">
   <div class="col size_3 center_center mar_10">
     <particle-paginator
       version="1"
@@ -448,7 +448,7 @@
 </app-particle-demo>
 
 <!-- PROFILE PICTURE -->
-<app-particle-demo [componentDetails]="allComponents.profilePicture">
+<app-particle-demo [componentDetails]="allComponents.profilePicture" id="profile_pic">
   <div class="pad_15">
     <div class="form_label mar_bot5">Check this guy out</div>
     <particle-profile-pic
@@ -459,7 +459,7 @@
 </app-particle-demo>
 
 <!-- PIPES -->
-<app-particle-demo [componentDetails]="allComponents.pipes">
+<app-particle-demo [componentDetails]="allComponents.pipes" id="ordinal_pipes">
   <div class="pad_15">
     <div class="form_label mar_bot5">Ordinal Number</div>
     <div class="text md">1 -> {{1 | ordinalNumber}}, 2 -> {{2 | ordinalNumber}}, 3 -> {{3 | ordinalNumber}}</div>
@@ -493,6 +493,12 @@
   </div>
 </app-particle-demo>
 
+<!-- END OF LIST -->
+<!-- END OF LIST -->
+<!-- END OF LIST -->
+<!-- END OF LIST -->
+<!-- END OF LIST -->
+<!-- END OF LIST -->
 
 <!-- DIALOG DEMONSTRATION -->
 <particle-dialog title="Parent Dialog" [object]="obj2" (closed)="obj2 = null" [allowClose]="true"
@@ -553,33 +559,7 @@
   </particle-dialog>
 </particle-dialog>
 
-<!-- RIGHT PUSH CONTAINER
-<particle-push-container
-  mainContentId="site-content"
-  side="right"
-  topOffset="100px"
-  [closeOnResize]="true"
-  [showSidePanel]="true"
-  [width]="250"
-  [hideCloseButton]="true"
-  #pushContainerRight>
-  <div class="menu_color min_h40 pad_10 pad_x15 text md bold v_center">
-    <div>Settings</div>
-  </div>
-  <div class="pad_10">
-    <div class="row bottom_left mar_5" style="height:32px;">
-      <div class="text md bolder">
-        Add basic controls here
-      </div>
-    </div>
-    <div class="bg_overlay brdr hr mar_y15 mar_x5"></div>
-    <div class="mar_5 mar_y10 pad_bot5">
-      <particle-theming></particle-theming>
-    </div>
-    <div class="center_center mar_5 mar_y10 pad_bot5 pad_top5 brad_3 brdr test">COOL COLOR VARIABLES</div>
-  </div>
-</particle-push-container>
--->
+
 <!-- NOTIFICATION CONTAINER -->
 <particle-notification></particle-notification>
 
