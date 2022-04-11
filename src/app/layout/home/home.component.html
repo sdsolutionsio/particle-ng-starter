@@ -1,11 +1,17 @@
 <!-- setup for a side column -->
-<div class="row height100">
-
-  <div class="row column space_between page_container_color brdr height100" style="margin-right:200px">
-
+<particle-layout-fullwidth-sidebar
+  [mainContent]="mainContent"
+  mainContentContainerClassList="page_container_color space_between brdr"
+  [rightSidebar]="sidebar"
+  [rightSidebarSticky]="true"
+  [rightSidebarStickyOffset]="200"
+  rightSidebarContainerClassList="bgimage"
+>
+  <ng-template #mainContent>
     <div class="row wrap">
       <div class="col size_1 page_container_color brdr pad_10 mar_5 text md center_center min_w280">
-        <img src="https://weatherishappening.com/updates/sites/all/modules/lazyloader/loader/loader-1.gif" style="transform: scaleX(-1);">
+        <img src="https://weatherishappening.com/updates/sites/all/modules/lazyloader/loader/loader-1.gif"
+             style="transform: scaleX(-1);">
       </div>
       <div class="col size_1 page_container_color brdr pad_10 mar_5 text md center_center min_w280">
         <img src="https://weatherishappening.com/updates/sites/all/modules/lazyloader/loader/loader-1.gif">
@@ -13,22 +19,24 @@
     </div>
     <div class="row wrap">
       <div class="col size_1 page_container_color brdr pad_10 mar_5 text md center_center min_w280">
-        <img src="https://weatherishappening.com/updates/sites/all/modules/lazyloader/loader/loader-1.gif" style="transform: scaleX(-1);">
+        <img src="https://weatherishappening.com/updates/sites/all/modules/lazyloader/loader/loader-1.gif"
+             style="transform: scaleX(-1);">
       </div>
       <div class="col size_1 page_container_color brdr pad_10 mar_5 text md center_center min_w280">
         <img src="https://weatherishappening.com/updates/sites/all/modules/lazyloader/loader/loader-1.gif">
       </div>
     </div>
-
 
 
     <!-- MIDDLE -->
     <div class="row">
       <div class="bg_blue brdr pad_10 mar_5 text md center_center width100">
         <div class="text_center">
-          Looks like you are about to <a [routerLink]="'demo'" class="text underline">EMBARK ON A MAGNIFICENT JOURNEY</a> into the unknown.
+          Looks like you are about to <a [routerLink]="'demo'" class="text underline">EMBARK ON A MAGNIFICENT
+          JOURNEY</a> into the unknown.
           <br/>
-          Grab your sword, grab your shield and get ready to battle your way through dragon caves and mutant salamander huts.
+          Grab your sword, grab your shield and get ready to battle your way through dragon caves and mutant salamander
+          huts.
         </div>
       </div>
     </div>
@@ -36,7 +44,8 @@
 
     <div class="row wrap">
       <div class="col size_1 page_container_color brdr pad_10 mar_5 text md center_center min_w280">
-        <img src="https://weatherishappening.com/updates/sites/all/modules/lazyloader/loader/loader-1.gif" style="transform: scaleX(-1);">
+        <img src="https://weatherishappening.com/updates/sites/all/modules/lazyloader/loader/loader-1.gif"
+             style="transform: scaleX(-1);">
       </div>
       <div class="col size_1 page_container_color brdr pad_10 mar_5 text md center_center min_w280">
         <img src="https://weatherishappening.com/updates/sites/all/modules/lazyloader/loader/loader-1.gif">
@@ -44,19 +53,19 @@
     </div>
     <div class="row wrap">
       <div class="col size_1 page_container_color brdr pad_10 mar_5 text md center_center min_w280">
-        <img src="https://weatherishappening.com/updates/sites/all/modules/lazyloader/loader/loader-1.gif" style="transform: scaleX(-1);">
+        <img src="https://weatherishappening.com/updates/sites/all/modules/lazyloader/loader/loader-1.gif"
+             style="transform: scaleX(-1);">
       </div>
       <div class="col size_1 page_container_color brdr pad_10 mar_5 text md center_center min_w280">
         <img src="https://weatherishappening.com/updates/sites/all/modules/lazyloader/loader/loader-1.gif">
       </div>
     </div>
     <div class="page_container_color brdr pad_10 mar_5 text md bgimage min_h50"></div>
-  </div>
+  </ng-template>
 
-
-  <div class="bgimage height100 hide_element center_center pad_10" style="width:200px;position: absolute;right:0;">
-    <button class="btn bg_blue pad_5 shadow">CLOSE ME</button>
-  </div>
-
-</div>
-
+  <ng-template #sidebar>
+    <div>
+      <button class="btn bg_blue pad_5 shadow">CLOSE ME</button>
+    </div>
+  </ng-template>
+</particle-layout-fullwidth-sidebar>
