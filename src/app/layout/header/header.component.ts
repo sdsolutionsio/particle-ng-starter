@@ -8,6 +8,10 @@ export class HeaderComponent {
 
   @Output()
   menuToggle: EventEmitter<any> = new EventEmitter<any>();
+  slideoverRight: any;
+  slideoverLeft: any;
+  slideoverBottom: any;
+  slideoverTop: any;
 
   constructor() { }
 

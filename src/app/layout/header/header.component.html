@@ -49,10 +49,50 @@
     </div>
     <div class="row hide_element center_right">
       <div class="text sm mar_right10">Hello, Samus Aran</div>
-      <button (click)="popover.toggle($event)" class="btn access clear hov_slide_up"><i class="fa fa-user-astronaut fa-2x"></i></button>
+      <button (click)="slideoverRight.toggle()" class="btn access clear hov_slide_up mar_right10">
+        <i class="fa fa-envelope fa-2x"></i>
+      </button>
+      <button (click)="popover.toggle($event)" class="btn access clear hov_slide_up mar_right10">
+        <i class="fa fa-user-astronaut fa-2x"></i>
+      </button>
     </div>
     <div class="mobile_only">
       <button class="btn access pad_3 brdr brad_3 nav_color" (click)="showMenu()"><i class="fas fa-bars fa-2x"></i></button>
     </div>
   </div>
 </nav>
+
+
+<particle-slideover position="right" width="350px" bgClass="page_container_color" #slideoverRight
+                    (opened)="slideoverLeft.close();slideoverBottom.close();slideoverTop.close()">
+  <div class="row column space_between">
+    <div>
+      <div class="min_h50 bg_blue center_left pad_10">
+        <div><i class="fa fa-envelope fa-2x"></i></div>
+        <div class="mar_left10">Notifications</div>
+      </div>
+      <div class="row pad_10 brdr border_bottom center_left">
+        <div class="col top_center"><i class="fas fa-comment fa-fw"></i></div>
+        <div class="col size_1 pad_5 center_left text md">You're right. No human being would stack books like this.</div>
+      </div>
+      <div class="row pad_10 brdr border_bottom center_left">
+        <div class="col top_center"><i class="fas fa-comment fa-fw"></i></div>
+        <div class="col size_1 pad_5 center_left text md">You're right. No human being would stack books like this.</div>
+      </div>
+      <div class="row pad_10 brdr border_bottom center_left">
+        <div class="col top_center"><i class="fas fa-comment fa-fw"></i></div>
+        <div class="col size_1 pad_5 center_left text md">You're right. No human being would stack books like this.</div>
+      </div>
+      <div class="row pad_10 brdr border_bottom center_left">
+        <div class="col top_center"><i class="fas fa-comment fa-fw"></i></div>
+        <div class="col size_1 pad_5 center_left text md">You're right. No human being would stack books like this.</div>
+      </div>
+      <div class="row pad_10 brdr border_bottom center_left">
+        <div class="col top_center"><i class="fas fa-comment fa-fw"></i></div>
+        <div class="col size_1 pad_5 center_left text md">You're right. No human being would stack books like this.</div>
+      </div>
+    </div>
+    <div class="pad_5 pad_top15 center_center pad_bot15 brdr bg_overlay_rev border_top"><button class="btn access lg bg_green hov_slide_up">View All Notifications</button></div>
+
+  </div>
+</particle-slideover>

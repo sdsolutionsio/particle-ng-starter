@@ -1,4 +1,32 @@
-<footer class="row footer_color pad_15 center_right" style="height:100px;">
-  <div>MEGA MAN 69</div>
-  <div style="height:75px; width:75px; background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/4172987b-0ca9-4731-8e97-16a4624ec85e/d81hs98-78330bd0-a972-436e-839f-968a203f9cd7.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzQxNzI5ODdiLTBjYTktNDczMS04ZTk3LTE2YTQ2MjRlYzg1ZVwvZDgxaHM5OC03ODMzMGJkMC1hOTcyLTQzNmUtODM5Zi05NjhhMjAzZjljZDcuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.SsDtrwLPOALqfITLkaxK8ELI0QKgCv1kMN-HowLr7qY'); background-size: cover;background-position: center;"></div>
+<footer class="row footer_color pad_15 center_right" style="height:50px;">
+    <button class="access btn clear hov_big_grow" (click)="slideoverBottom.toggle()">
+      <i class="fa fa-arrow-up-from-ground-water fa-lg"></i>
+    </button>
 </footer>
+
+
+<particle-slideover position="bottom" bgClass="footer_color" height="150px" [modal]="false" #slideoverBottom
+                    (opened)="slideoverRight.close();slideoverLeft.close();slideoverTop.close()">
+  <div class="row center_right">
+    <div class="row center_center mar_right15 space_between">
+      <div class="col size_3 space_evenly hide_element">
+        <div><i class="fa-brands fa-angular fa-4x"></i></div>
+        <div><i class="fa-brands fa-github fa-4x"></i></div>
+        <div><i class="fa-brands fa-atlassian fa-4x"></i></div>
+        <div><i class="fa-brands fa-aws fa-4x"></i></div>
+        <div><i class="fa-brands fa-creative-commons fa-4x"></i></div>
+      </div>
+      <div class="col size_1 center_right">
+        <div class="text_right text md brdr border_right min_h100 pad_10 center_right">
+          <div>
+            <button class="btn access clear hov_slide_up">About Mega Man</button><br/>
+            <button class="btn access clear hov_slide_up">Directions to Mario and Luigi</button><br/>
+            <button class="btn access clear hov_slide_up">Contact Space Invaders</button><br/>
+            <div class="text bolder mar_top5">1-800-666-H3LL</div>
+          </div>
+        </div>
+        <div style="height:75px; width:75px; background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/4172987b-0ca9-4731-8e97-16a4624ec85e/d81hs98-78330bd0-a972-436e-839f-968a203f9cd7.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzQxNzI5ODdiLTBjYTktNDczMS04ZTk3LTE2YTQ2MjRlYzg1ZVwvZDgxaHM5OC03ODMzMGJkMC1hOTcyLTQzNmUtODM5Zi05NjhhMjAzZjljZDcuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.SsDtrwLPOALqfITLkaxK8ELI0QKgCv1kMN-HowLr7qY'); background-size: cover;background-position: center;"></div>
+      </div>
+    </div>
+  </div>
+</particle-slideover>

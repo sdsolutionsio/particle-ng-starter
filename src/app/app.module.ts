@@ -7,13 +7,14 @@ import {
     LocalStorageService,
     ParticleAccordionModule, ParticleLayoutModule, ParticlePopoverModule, ParticleProfilePicModule,
     ParticlePushContainerModule,
-    ParticleScrollToTopModule
+    ParticleScrollToTopModule, ParticleSlideoverModule, ParticleSliderModule, ParticleThemingModule
 } from '@sdsolutions/particle-ng';
 import {DemonstrationModule} from './modules/demonstration/demonstration.module';
 import {HeaderComponent} from './layout/header/header.component';
 import {FooterComponent} from './layout/footer/footer.component';
 import {HomeComponent} from './layout/home/home.component';
 import {MenuComponent} from './layout/menu/menu.component';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -32,7 +33,11 @@ import {MenuComponent} from './layout/menu/menu.component';
         ParticleScrollToTopModule,
         ParticlePopoverModule,
         ParticleProfilePicModule,
-        ParticleLayoutModule
+        ParticleLayoutModule,
+        ParticleSliderModule,
+        ParticleThemingModule,
+        FormsModule,
+        ParticleSlideoverModule
     ],
   providers: [
     LocalStorageService
