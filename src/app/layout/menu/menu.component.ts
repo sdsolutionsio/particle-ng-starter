@@ -19,7 +19,7 @@ export class MenuComponent {
     this.pushContainerLeft.toggle();
   }
 
-  navigate(page: string, fragment: string): void {
+  navigate(page: string, fragment?: string): void {
     this.router.navigate([page], {fragment}).then();
 
     if (window.innerWidth <= 768) {

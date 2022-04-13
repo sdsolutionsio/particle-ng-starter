@@ -30,11 +30,29 @@ import {
 
 import {DemonstrationRoutingModule} from './demonstration-routing.module';
 import { ParticleDemoComponent } from './components/particle-demo/particle-demo.component';
+import { Layout1Component } from './pages/layout1/layout1.component';
+import { Layout2Component } from './pages/layout2/layout2.component';
+import { Layout3Component } from './pages/layout3/layout3.component';
+import { Layout4Component } from './pages/layout4/layout4.component';
+import { Layout5Component } from './pages/layout5/layout5.component';
+import { Layout6Component } from './pages/layout6/layout6.component';
+import { Layout7Component } from './pages/layout7/layout7.component';
+import { Layout8Component } from './pages/layout8/layout8.component';
+import { Layout9Component } from './pages/layout9/layout9.component';
 
 @NgModule({
   declarations: [
     DashboardComponent,
-    ParticleDemoComponent
+    ParticleDemoComponent,
+    Layout1Component,
+    Layout2Component,
+    Layout3Component,
+    Layout4Component,
+    Layout5Component,
+    Layout6Component,
+    Layout7Component,
+    Layout8Component,
+    Layout9Component
   ],
   imports: [
     BrowserModule,

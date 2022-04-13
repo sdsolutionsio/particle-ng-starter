@@ -97,6 +97,31 @@
             </ng-template>
           </particle-accordion-item>
           <!-- Item 4 -->
+          <particle-accordion-item [open]="true" headerClass="bg_orange border_none">
+            <ng-template particleAccordionHeader>
+              <div class="space_between width100">
+                <div class="text bolder">
+                  <i class="fas fa-ambulance"></i> Layouts
+                </div>
+                <div>
+                  <i class="fas fa-fw fa-caret-down"></i>
+                </div>
+              </div>
+            </ng-template>
+            <ng-template particleAccordionContent>
+              <div class="bg_orange_light_1 pad_x20 pad_y10">
+                <button class="btn access hov_slide_right clear" (click)="navigate('layout1')">Layout 1</button><br/>
+                <button class="btn access hov_slide_right clear" (click)="navigate('layout2')">Layout 2</button><br/>
+                <button class="btn access hov_slide_right clear" (click)="navigate('layout3')">Layout 3</button><br/>
+                <button class="btn access hov_slide_right clear" (click)="navigate('layout4')">Layout 4</button><br/>
+                <button class="btn access hov_slide_right clear" (click)="navigate('layout5')">Layout 5</button><br/>
+                <button class="btn access hov_slide_right clear" (click)="navigate('layout6')">Layout 6</button><br/>
+                <button class="btn access hov_slide_right clear" (click)="navigate('layout7')">Layout 7</button><br/>
+                <button class="btn access hov_slide_right clear" (click)="navigate('layout8')">Layout 8</button><br/>
+                <button class="btn access hov_slide_right clear" (click)="navigate('layout9')">Layout 9</button><br/>
+              </div>
+            </ng-template>
+          </particle-accordion-item>
         </particle-accordion>
       </div>
     </div>
