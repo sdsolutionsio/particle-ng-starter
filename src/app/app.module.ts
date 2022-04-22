@@ -4,10 +4,17 @@ import {BrowserModule} from '@angular/platform-browser';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {
-    LocalStorageService,
-    ParticleAccordionModule, ParticleLayoutModule, ParticlePopoverModule, ParticleProfilePicModule,
-    ParticlePushContainerModule,
-    ParticleScrollToTopModule, ParticleSlideoverModule, ParticleSliderModule, ParticleThemingModule
+  LocalStorageService,
+  ParticleAccordionModule,
+  ParticleButtonModule,
+  ParticleLayoutModule,
+  ParticlePopoverModule,
+  ParticleProfilePicModule,
+  ParticlePushContainerModule,
+  ParticleScrollToTopModule,
+  ParticleSlideoverModule,
+  ParticleSliderModule,
+  ParticleThemingModule
 } from '@sdsolutions/particle-ng';
 import {DemonstrationModule} from './modules/demonstration/demonstration.module';
 import {HeaderComponent} from './layout/header/header.component';
@@ -24,21 +31,22 @@ import {FormsModule} from "@angular/forms";
     HomeComponent,
     MenuComponent
   ],
-    imports: [
-        BrowserModule,
-        DemonstrationModule,
-        AppRoutingModule,
-        ParticlePushContainerModule,
-        ParticleAccordionModule,
-        ParticleScrollToTopModule,
-        ParticlePopoverModule,
-        ParticleProfilePicModule,
-        ParticleLayoutModule,
-        ParticleSliderModule,
-        ParticleThemingModule,
-        FormsModule,
-        ParticleSlideoverModule
-    ],
+  imports: [
+    BrowserModule,
+    DemonstrationModule,
+    AppRoutingModule,
+    ParticlePushContainerModule,
+    ParticleAccordionModule,
+    ParticleScrollToTopModule,
+    ParticlePopoverModule,
+    ParticleProfilePicModule,
+    ParticleLayoutModule,
+    ParticleSliderModule,
+    ParticleThemingModule,
+    FormsModule,
+    ParticleSlideoverModule,
+    ParticleButtonModule
+  ],
   providers: [
     LocalStorageService
   ],
