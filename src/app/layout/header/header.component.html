@@ -1,67 +1,68 @@
 <!-- navbar -->
-<nav class="nav_color" style="height:100px;">
-  <div class="row">
-    <div class="center_left">
-      <a routerLink="">
-        <div class="center_center mar_15" style="width:90px;">
-          <img src="https://i.pinimg.com/originals/36/25/f4/3625f46b380a380dc4e7dd847d2bb091.gif" width="90px;">
-        </div>
-      </a>
-      <a routerLink="">
-        <div class="nav_title_box">
-          <div class="nav_title">PARTICLE STARTER PROJECT</div>
-          <div class="nav_subtitle pad_top3">Buckle up buttercup, it's go time.</div>
-        </div>
-      </a>
-    </div>
+<ng-container *ngIf="currentTheme | async as theme">
+  <nav class="header_color" [style.height]="theme.layoutVariables.headerHeight">
+    <div class="row">
+      <div class="center_left">
+        <a routerLink="">
+          <div class="center_center mar_15" style="width:90px;">
+            <img src="https://i.pinimg.com/originals/36/25/f4/3625f46b380a380dc4e7dd847d2bb091.gif" width="90px;">
+          </div>
+        </a>
+        <a routerLink="">
+          <div class="nav_title_box">
+            <div class="nav_title">PARTICLE STARTER PROJECT</div>
+            <div class="nav_subtitle pad_top3">Buckle up buttercup, it's go time.</div>
+          </div>
+        </a>
+      </div>
 
-  </div>
-  <div class="center_right mar_right15">
-    <div class="hide_element">
-      <particle-popover width="300" height="200" #popover>
-        <div class="row_block">
-          <div class="row min_h50">
-            <div class="row center_left pad_10">
-              <particle-profile-pic
-                toolTip="Philip J Fry"
-                imageUrl="http://www.pixlb.it/media/avatars/1.png">
-              </particle-profile-pic>
-              <div class="pad_10">
-                <div class="text md bolder">Philip J. Fry</div>
-                <div class="text sm">DOB: August 14, 1974</div>
+    </div>
+    <div class="center_right mar_right15">
+      <div class="hide_element">
+        <particle-popover width="300" height="200" #popover>
+          <div class="row_block">
+            <div class="row min_h50">
+              <div class="row center_left pad_10">
+                <particle-profile-pic
+                  toolTip="Philip J Fry"
+                  imageUrl="http://www.pixlb.it/media/avatars/1.png">
+                </particle-profile-pic>
+                <div class="pad_10">
+                  <div class="text md bolder">Philip J. Fry</div>
+                  <div class="text sm">DOB: August 14, 1974</div>
+                </div>
               </div>
             </div>
+            <div class="pad_10 brdr brad_3 mar_5">
+              <button class="btn access hov_slide_right clear">View my Details</button><br/>
+              <button class="btn access hov_slide_right clear">Check my Inbox</button><br/>
+              <button class="btn access hov_slide_right clear">Dance Around Like an Idiot</button><br/>
+              <button class="btn access hov_slide_right clear">Logout</button><br/>
+            </div>
+            <div class="center_right ">
+              <button (click)="popover.toggle($event)" class="access btn bg_overlay brdr text sm bolder mar_5 clear">
+                CLOSE
+              </button>
+            </div>
           </div>
-          <div class="pad_10 brdr brad_3 mar_5">
-            <button class="btn access hov_slide_right clear">View my Details</button><br/>
-            <button class="btn access hov_slide_right clear">Check my Inbox</button><br/>
-            <button class="btn access hov_slide_right clear">Dance Around Like an Idiot</button><br/>
-            <button class="btn access hov_slide_right clear">Logout</button><br/>
-          </div>
-          <div class="center_right ">
-            <button (click)="popover.toggle($event)" class="access btn bg_overlay brdr text sm bolder mar_5 clear">
-              CLOSE
-            </button>
-          </div>
-        </div>
 
-      </particle-popover>
+        </particle-popover>
+      </div>
+      <div class="row hide_element center_right">
+        <div class="text sm mar_right10">Hello, Samus Aran</div>
+        <button (click)="slideoverRight.toggle()" class="btn access clear hov_slide_up mar_right10">
+          <i class="fa fa-envelope fa-2x"></i>
+        </button>
+        <button (click)="popover.toggle($event)" class="btn access clear hov_slide_up mar_right10">
+          <i class="fa fa-user-astronaut fa-2x"></i>
+        </button>
+      </div>
+      <div class="mobile_only">
+        <button class="btn access pad_3 brdr brad_3 nav_color" (click)="showMenu()"><i class="fas fa-bars fa-2x"></i></button>
+      </div>
     </div>
-    <div class="row hide_element center_right">
-      <div class="text sm mar_right10">Hello, Samus Aran</div>
-      <button (click)="slideoverRight.toggle()" class="btn access clear hov_slide_up mar_right10">
-        <i class="fa fa-envelope fa-2x"></i>
-      </button>
-      <button (click)="popover.toggle($event)" class="btn access clear hov_slide_up mar_right10">
-        <i class="fa fa-user-astronaut fa-2x"></i>
-      </button>
-    </div>
-    <div class="mobile_only">
-      <button class="btn access pad_3 brdr brad_3 nav_color" (click)="showMenu()"><i class="fas fa-bars fa-2x"></i></button>
-    </div>
-  </div>
-</nav>
-
+  </nav>
+</ng-container>
 
 <particle-slideover position="right" width="350px" bgClass="page_container_color" #slideoverRight
                     (opened)="slideoverLeft.close();slideoverBottom.close();slideoverTop.close()">

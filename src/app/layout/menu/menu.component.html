@@ -1,9 +1,10 @@
+<ng-container *ngIf="currentTheme | async as theme">
 <particle-push-container
   mainContentId="site-content"
   side="left"
-  [width]="225"
-  topOffset="100px"
-  bottomOffset="50px"
+  [width]="+$any(theme.layoutVariables.menuWidth)"
+  [topOffset]="theme.layoutVariables.headerHeight"
+  [bottomOffset]="theme.layoutVariables.footerHeight"
   [closeOnResize]="true"
   [showSidePanel]="true"
   [hideCloseButton]="true"
@@ -128,3 +129,4 @@
     </div>
   </div>
 </particle-push-container>
+</ng-container>

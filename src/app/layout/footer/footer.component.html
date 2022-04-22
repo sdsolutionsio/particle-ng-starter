@@ -1,9 +1,10 @@
-<footer class="row footer_color pad_15 center_right" style="height:50px;">
-    <button class="access btn clear hov_big_grow" (click)="slideoverBottom.toggle()">
-      <i class="fa fa-arrow-up-from-ground-water fa-lg"></i>
-    </button>
-</footer>
-
+<ng-container *ngIf="currentTheme | async as theme">
+  <footer class="row footer_color pad_15 center_right" [style.height]="theme.layoutVariables.footerHeight">
+      <button class="access btn clear hov_big_grow" (click)="slideoverBottom.toggle()">
+        <i class="fa fa-arrow-up-from-ground-water fa-lg"></i>
+      </button>
+  </footer>
+</ng-container>
 
 <particle-slideover position="bottom" bgClass="footer_color" height="150px" [modal]="false" #slideoverBottom
                     (opened)="slideoverRight.close();slideoverLeft.close();slideoverTop.close()">

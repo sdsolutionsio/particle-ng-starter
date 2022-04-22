@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {ThemingService} from "@sdsolutions/particle-ng";
 
 @Component({
   selector: 'app-footer',
@@ -9,6 +10,8 @@ export class FooterComponent {
   slideoverLeft: any;
   slideoverTop: any;
 
-  constructor() { }
+  currentTheme = this.themingService.selectedTheme;
+
+  constructor(private themingService: ThemingService) { }
 
 }

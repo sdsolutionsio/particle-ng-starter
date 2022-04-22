@@ -1,5 +1,5 @@
 import {Component, ViewChild} from '@angular/core';
-import {PushContainerComponent} from "@sdsolutions/particle-ng";
+import {PushContainerComponent, ThemingService} from "@sdsolutions/particle-ng";
 import {Router} from "@angular/router";
 
 @Component({
@@ -11,8 +11,11 @@ export class MenuComponent {
   @ViewChild('pushContainerLeft')
   pushContainerLeft: PushContainerComponent = null as any;
 
+  currentTheme = this.themingService.selectedTheme;
+
   constructor(
-    private router: Router
+    private router: Router,
+    private themingService: ThemingService
   ) { }
 
   toggle(): void {

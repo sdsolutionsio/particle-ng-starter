@@ -1,4 +1,5 @@
 import {Component, EventEmitter, Output} from '@angular/core';
+import {ThemingService} from "@sdsolutions/particle-ng";
 
 @Component({
   selector: 'app-header',
@@ -13,7 +14,9 @@ export class HeaderComponent {
   slideoverBottom: any;
   slideoverTop: any;
 
-  constructor() { }
+  currentTheme = this.themingService.selectedTheme;
+
+  constructor(private themingService: ThemingService) { }
 
   showMenu(): void {
     this.menuToggle.emit();

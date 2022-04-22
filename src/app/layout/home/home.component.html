@@ -1,28 +1,30 @@
 <!-- setup for a side column -->
+<ng-container *ngIf="currentTheme | async as theme">
 <particle-layout-fullwidth-sidebar
   [mainContent]="mainContent"
-  mainContentContainerClassList="page_container_color space_between brdr"
+  mainContentContainerClassList="content_color space_between brdr"
   [rightSidebar]="sidebar"
   [rightSidebarSticky]="true"
-  [rightSidebarStickyOffset]="150"
+  [headerHeight]="theme.layoutVariables.headerHeight"
+  [footerHeight]="theme.layoutVariables.footerHeight"
   rightSidebarContainerClassList="bgimage space_between pad_5"
 >
   <ng-template #mainContent>
     <div class="row wrap">
-      <div class="col size_1 page_container_color brdr pad_10 mar_5 text md center_center min_w280">
+      <div class="col size_1 content_color brdr pad_10 mar_5 text md center_center min_w280">
         <img src="https://weatherishappening.com/updates/sites/all/modules/lazyloader/loader/loader-1.gif"
              style="transform: scaleX(-1);">
       </div>
-      <div class="col size_1 page_container_color brdr pad_10 mar_5 text md center_center min_w280">
+      <div class="col size_1 content_color brdr pad_10 mar_5 text md center_center min_w280">
         <img src="https://weatherishappening.com/updates/sites/all/modules/lazyloader/loader/loader-1.gif">
       </div>
     </div>
     <div class="row wrap">
-      <div class="col size_1 page_container_color brdr pad_10 mar_5 text md center_center min_w280">
+      <div class="col size_1 content_color brdr pad_10 mar_5 text md center_center min_w280">
         <img src="https://weatherishappening.com/updates/sites/all/modules/lazyloader/loader/loader-1.gif"
              style="transform: scaleX(-1);">
       </div>
-      <div class="col size_1 page_container_color brdr pad_10 mar_5 text md center_center min_w280">
+      <div class="col size_1 content_color brdr pad_10 mar_5 text md center_center min_w280">
         <img src="https://weatherishappening.com/updates/sites/all/modules/lazyloader/loader/loader-1.gif">
       </div>
     </div>
@@ -41,7 +43,7 @@
       </div>
     </div>
     <!-- END MIDDLE -->
-    <div class="page_container_color brdr pad_10 mar_5 text md bgimage min_h50"></div>
+    <div class="content_color brdr pad_10 mar_5 text md bgimage min_h50"></div>
   </ng-template>
 
   <ng-template #sidebar>
@@ -72,3 +74,4 @@
     </div>
   </ng-template>
 </particle-layout-fullwidth-sidebar>
+</ng-container>
